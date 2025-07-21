@@ -1,102 +1,383 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Star,
+  PlayCircle,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
+import { Input } from "@/components/ui/input";
 
-export default function Home() {
+export default function Component() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center text-white overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/images/hero-background.png"
+          alt="When Sadness Lingers movie poster background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="z-0"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
+        <div className="relative z-20 text-center space-y-6 px-4 md:px-6">
+          <div className="absolute top-4 left-4">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/placeholder.svg?height=60&width=60"
+              alt="Movie Logo"
+              width={60}
+              height={60}
+              className="h-12 w-12 md:h-16 md:w-16"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-left mb-4 md:mb-0">
+              When the Mind <br /> Breaks...
+            </h2>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-center">
+              When Sadness Lingers
+            </h1>
+            <h2 className="text-3xl md:text-4xl font-bold text-right mt-4 md:mt-0">
+              Can the Heart <br /> Heal?
+            </h2>
+          </div>
+          <div className="text-lg md:text-xl font-medium">
+            Noni Buencamino &bull; Sylvia Sanchez
+          </div>
+          <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase">
+            Buy Tickets
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* Video Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white flex justify-center items-center">
+        <div className="relative w-full max-w-4xl aspect-video bg-gray-800 rounded-lg overflow-hidden">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/placeholder.svg?height=450&width=800"
+            alt="Video Thumbnail"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black/50">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-20 w-20 text-white hover:text-gray-300"
+            >
+              <PlayCircle className="h-full w-full" />
+              <span className="sr-only">Play Video</span>
+            </Button>
+            <p className="mt-4 text-2xl font-serif italic">Divine Smith</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cast/Crew Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
+        <div className="container px-4 md:px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 overflow-x-auto pb-4">
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center text-center min-w-[120px]"
+              >
+                <Image
+                  src={`/placeholder.svg?height=150&width=150&query=person headshot ${
+                    i + 1
+                  }`}
+                  alt={`Cast Member ${i + 1}`}
+                  width={150}
+                  height={150}
+                  className="rounded-full object-cover aspect-square mb-2"
+                />
+                <p className="text-sm font-medium">Name Surname</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Role</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Synopsis Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
+        <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-6 h-6 fill-yellow-400 text-yellow-400"
+              />
+            ))}
+          </div>
+          <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 italic">
+            When Sadness Lingers is a heart-wrenching drama that explores the
+            devastating consequences of a family&apos;s disintegration in the
+            face of mental illness. Agnes, a loving mother struggling with
+            schizophrenia, is abandoned by her husband Alfred, who leaves her
+            for another man.
+          </p>
+        </div>
+      </section>
+
+      {/* Sponsors Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+        <div className="container px-4 md:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Thank You To Our Dear Sponsors
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
+            {[...Array(10)].map((_, i) => (
+              <Image
+                key={i}
+                src={`/placeholder.svg?height=100&width=100&query=company logo ${
+                  i + 1
+                }`}
+                alt={`Sponsor Logo ${i + 1}`}
+                width={100}
+                height={100}
+                className="mx-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            ))}
+          </div>
+          <p className="mt-12 text-lg font-medium">
+            ABC Company - CDE Company - EFG Company - HIJ Company - KLM Company
+          </p>
+        </div>
+      </section>
+
+      {/* Our Beneficiaries Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Our Beneficiaries
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="flex flex-col items-center text-center space-y-6">
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Green Ribbon Icon"
+                width={200}
+                height={200}
+                className="h-48 w-48 object-contain"
+              />
+              <h3 className="text-2xl font-bold">
+                &quot;No One Should Suffer Alone&quot;
+              </h3>
+              <h4 className="text-xl font-semibold text-green-600">
+                Supporting Mental Health Initiatives
+              </h4>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-md">
+                When Sadness Lingers and the WSL Movement proudly partner with
+                mental health initiatives to ensure no one faces their struggles
+                without support. A portion of proceeds from the film will
+                directly benefit Philippine-based mental health crisis lines,
+                helping them sustain and expand their life-saving services.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center space-y-6">
+              <Image
+                src="/placeholder.svg?height=200&width=200"
+                alt="Person with Heart Illustration"
+                width={200}
+                height={200}
+                className="h-48 w-48 object-contain"
+              />
+              <h3 className="text-2xl font-bold">
+                &quot;Healing Should Be Accessible to All&quot;
+              </h3>
+              <h4 className="text-xl font-semibold text-red-600">
+                Supporting Free Mental Health Clinics
+              </h4>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-md">
+                When Sadness Lingers and the WSL Movement are committed to
+                breaking down barriers to mental healthcare. Through our
+                partnership with Happy Heart [Clinic Name], a free mental health
+                clinic providing professional care to underserved Filipino
+                communities.
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center mt-12">
+            <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase">
+              Buy Tickets
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About WSL Movement Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            About WSL Movement
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center md:justify-end">
+              <Image
+                src="/placeholder.svg?height=250&width=250"
+                alt="WSL Movement Logo"
+                width={250}
+                height={250}
+                className="h-64 w-64 object-contain"
+              />
+            </div>
+            <div className="space-y-6 text-center md:text-left">
+              <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 italic">
+                &quot;The WSL Movement is a Filipino advocacy group dedicated to
+                breaking the silence around mental health through the powerful
+                medium of storytelling. Drawing inspiration from the powerful
+                narrative of When Sadness Lingers, our mission is to foster
+                understanding, reduce stigma, and provide accessible resources
+                for individuals and families facing mental health
+                challenges.&quot;
+              </p>
+              <h3 className="text-2xl font-bold">Join Us</h3>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Whether you&apos;re a survivor, supporter, or advocate, you
+                belong here. Together, we can turn sadness into strength—one
+                conversation at a time. &quot;Hindi ka nag-iisa. You are not
+                alone.&quot;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full py-12 md:py-16 bg-black text-white">
+        <div className="container px-4 md:px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="space-y-4 md:col-span-2">
+            <p className="text-sm text-gray-400">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p className="text-sm text-gray-400">
+              &copy; 2023 All rights reserved.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-8 md:col-span-3">
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Navigation</h3>
+              <ul className="space-y-1 text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Shop
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Our Studio</h3>
+              <ul className="space-y-1 text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Our Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Our History
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Information</h3>
+              <ul className="space-y-1 text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Disclaimer
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Vision
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">News & Film Update</h3>
+              <p className="text-sm text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="Your Email"
+                  className="flex-1 bg-gray-800 border-gray-700 text-white placeholder-gray-500"
+                />
+                <Button
+                  type="submit"
+                  className="bg-red-600 hover:bg-red-700 text-white"
+                >
+                  Submit
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container px-4 md:px-6 flex justify-end mt-8">
+          <div className="flex space-x-4">
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Facebook className="h-6 w-6" />
+              <span className="sr-only">Facebook</span>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Twitter className="h-6 w-6" />
+              <span className="sr-only">Twitter</span>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Instagram className="h-6 w-6" />
+              <span className="sr-only">Instagram</span>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Linkedin className="h-6 w-6" />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <Youtube className="h-6 w-6" />
+              <span className="sr-only">YouTube</span>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
