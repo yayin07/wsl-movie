@@ -240,21 +240,21 @@ export default function Component() {
       {/* About WSL Movement Section */}
       <section className="w-full py-12 md:py-20 bg-white dark:bg-gray-800">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            About WSL Movement
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-12 items-center">
-            <div className="flex justify-center md:justify-end col-span-1">
+          <div className="md:grid  md:grid-cols-4 gap-12 ">
+            <div className=" h-[250px]  flex items-center justify-center md:justify-end md:col-span-1 bg-red-400">
               <Image
                 src="/placeholder.svg?height=250&width=250"
                 alt="WSL Movement Logo"
-                width={250}
-                height={250}
-                className="h-64 w-64 object-contain"
+                fill
+                className="h-full w-full object-contain"
               />
             </div>
+
             <div className="space-y-6 text-center md:text-left col-span-3">
+              <h2 className="text-3xl md:text-4xl font-bold  mb-12">
+                About WSL Movement
+              </h2>
+
               <h3 className="text-2xl font-bold">
                 "When Sadness Lingers" is more than a film—it’s a movement.
               </h3>
