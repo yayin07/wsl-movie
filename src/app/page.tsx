@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Star, PlayCircle } from "lucide-react";
-
+import { PlayCircle } from "lucide-react";
+import { IoStarSharp } from "react-icons/io5";
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center text-white overflow-hidden">
+      <section className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center text-white overflow-hidden">
         <Image
           src="/images/hero-background.png"
           alt="When Sadness Lingers movie poster background"
@@ -40,15 +40,16 @@ export default function Component() {
           <div className="text-lg md:text-xl font-medium">
             Noni Buencamino &bull; Sylvia Sanchez
           </div>
-          <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase">
+
+          <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-6 px-8 rounded-full text-lg uppercase">
             Buy Tickets
           </Button>
         </div>
       </section>
 
       {/* Video Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white flex justify-center items-center">
-        <div className="relative w-full max-w-4xl aspect-video bg-gray-800 rounded-lg overflow-hidden">
+      <section className="w-full py-12 md:py-16  bg-black text-white flex justify-center items-center">
+        <div className="relative w-full h-[20em] md:h-[35em]  aspect-video bg-gray-800 rounded-lg overflow-hidden">
           <Image
             src="/placeholder.svg?height=450&width=800"
             alt="Video Thumbnail"
@@ -56,6 +57,7 @@ export default function Component() {
             objectFit="cover"
             className="z-0"
           />
+
           <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black/50">
             <Button
               variant="ghost"
@@ -65,34 +67,31 @@ export default function Component() {
               <PlayCircle className="h-full w-full" />
               <span className="sr-only">Play Video</span>
             </Button>
-            <p className="mt-4 text-2xl font-serif italic">Divine Smith</p>
+            <p className="mt-4 text-2xl font-serif italic">
+              CMMS FILM PRODUCTION
+            </p>
           </div>
         </div>
       </section>
 
       {/* Cast/Crew Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 overflow-x-auto pb-4">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center text-center min-w-[120px]"
-              >
-                <Image
-                  src={`/placeholder.svg?height=150&width=150&query=person headshot ${
-                    i + 1
-                  }`}
-                  alt={`Cast Member ${i + 1}`}
-                  width={150}
-                  height={150}
-                  className="rounded-full object-cover aspect-square mb-2"
-                />
-                <p className="text-sm font-medium">Name Surname</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Role</p>
-              </div>
-            ))}
-          </div>
+      <section className="w-full  bg-gray-100 dark:bg-gray-900">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 overflow-x-auto ">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center text-center min-w-[120px] h-64  border "
+            >
+              <Image
+                src={`/placeholder.svg?height=150&width=150&query=person headshot ${
+                  i + 1
+                }`}
+                alt={`Cast Member ${i + 1}`}
+                fill
+                className="rounded-full object-cover aspect-square mb-2"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -101,13 +100,13 @@ export default function Component() {
         <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center">
           <div className="flex justify-center mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star
+              <IoStarSharp
                 key={i}
-                className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                className="w-12 h-12 fill-yellow-400 text-yellow-400"
               />
             ))}
           </div>
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 italic">
+          <p className="text-lg md:text-[25px] leading-relaxed text-gray-700 dark:text-gray-300 italic">
             When Sadness Lingers is a heart-wrenching drama that explores the
             devastating consequences of a family&apos;s disintegration in the
             face of mental illness. Agnes, a loving mother struggling with
@@ -118,13 +117,14 @@ export default function Component() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
-        <div className="container px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Thank You To Our Dear Sponsors
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
-            {[...Array(10)].map((_, i) => (
+      <section className="w-full py-12 md:py-16  bg-black text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Thank You To Our Dear Sponsors
+        </h2>
+
+        <div className="px-4 md:px-6 lg:px-16 space-y-6 ">
+          <div className="grid grid-cols-2 md:grid-cols-4  gap-8 items-center justify-center">
+            {[...Array(4)].map((_, i) => (
               <Image
                 key={i}
                 src={`/placeholder.svg?height=100&width=100&query=company logo ${
@@ -137,66 +137,100 @@ export default function Component() {
               />
             ))}
           </div>
-          <p className="mt-12 text-lg font-medium">
-            ABC Company - CDE Company - EFG Company - HIJ Company - KLM Company
-          </p>
+
+          <div className="space-y-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 items-center justify-center">
+              {[...Array(8)].map((_, i) => (
+                <Image
+                  key={i}
+                  src={`/placeholder.svg?height=100&width=100&query=company logo ${
+                    i + 1
+                  }`}
+                  alt={`Sponsor Logo ${i + 1}`}
+                  width={100}
+                  height={100}
+                  className="mx-auto opacity-80 hover:opacity-100 transition-opacity"
+                />
+              ))}
+            </div>
+
+            <p className=" text-center text-lg font-medium">
+              ABC Company - CDE Company - EFG Company - HIJ Company - KLM
+              Company
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Our Beneficiaries Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
-        <div className="container px-4 md:px-6">
+      <section className="w-full py-12 md:py-16  bg-black text-white">
+        <div className="container px-4 md:px-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Our Beneficiaries
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="flex flex-col items-center text-center space-y-6">
-              <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Green Ribbon Icon"
-                width={200}
-                height={200}
-                className="h-48 w-48 object-contain"
-              />
-              <h3 className="text-2xl font-bold">
-                &quot;No One Should Suffer Alone&quot;
-              </h3>
-              <h4 className="text-xl font-semibold text-green-600">
-                Supporting Mental Health Initiatives
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-md">
-                When Sadness Lingers and the WSL Movement proudly partner with
-                mental health initiatives to ensure no one faces their struggles
-                without support. A portion of proceeds from the film will
-                directly benefit Philippine-based mental health crisis lines,
-                helping them sustain and expand their life-saving services.
-              </p>
+
+          <div className="grid md:grid-cols-2 gap-4 mditems-start">
+            <div className="flex flex-row gap-2">
+              <div className="w-36 bg-white">
+                <Image
+                  src="/placeholder.svg?height=200&width=200"
+                  alt="Green Ribbon Icon"
+                  fill
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="flex flex-col items-center text-center space-y-6 w-full">
+                <h3 className="text-2xl font-bold">
+                  &quot;No One Should Suffer Alone&quot;
+                </h3>
+                <h4 className="text-xl font-semibold text-green-600">
+                  Supporting Mental Health Initiatives
+                </h4>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  When Sadness Lingers and the WSL Movement proudly partner with
+                  mental health initiatives to ensure no one faces their
+                  struggles without support. A portion of proceeds from the film
+                  will directly benefit Philippine-based mental health crisis
+                  lines, helping them sustain and expand their life-saving
+                  services.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-center text-center space-y-6">
-              <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Person with Heart Illustration"
-                width={200}
-                height={200}
-                className="h-48 w-48 object-contain"
-              />
-              <h3 className="text-2xl font-bold">
-                &quot;Healing Should Be Accessible to All&quot;
-              </h3>
-              <h4 className="text-xl font-semibold text-red-600">
-                Supporting Free Mental Health Clinics
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-md">
-                When Sadness Lingers and the WSL Movement are committed to
-                breaking down barriers to mental healthcare. Through our
-                partnership with Happy Heart [Clinic Name], a free mental health
-                clinic providing professional care to underserved Filipino
-                communities.
-              </p>
+
+            <div className="flex flex-row gap-2">
+              <div className="w-36  bg-white">
+                <Image
+                  src="/placeholder.svg?height=200&width=200"
+                  alt="Green Ribbon Icon"
+                  fill
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="flex flex-col items-center text-center space-y-6 w-full">
+                <h3 className="text-2xl font-bold">
+                  &quot;Healing Should Be Accessible to All&quot;
+                </h3>
+                <h4 className="text-xl font-semibold text-red-600">
+                  Supporting Free Mental Health Clinics
+                </h4>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed ">
+                  When Sadness Lingers and the WSL Movement are committed to
+                  breaking down barriers to mental healthcare. Through our
+                  partnership with Happy Heart [Clinic Name], a free mental
+                  health clinic providing professional care to underserved
+                  Filipino communities.
+                </p>
+              </div>
             </div>
           </div>
+
           <div className="flex justify-center mt-12">
-            <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase">
+            <Button
+              size="lg"
+              className="bg-red-600 hover:bg-red-700 underline text-white cursor-pointer font-bold py-8 px-8 rounded-full text-lg uppercase"
+            >
               Buy Tickets
             </Button>
           </div>

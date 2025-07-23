@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <div className="w-full py-6 md:py-12 bg-white text-gray-700 dark:bg-gray-900 dark:text-gray-300">
-        <div className="container px-4 md:px-6 grid grid-cols-7 gap-8">
+        <div className="container px-4 md:px-6 lg:grid grid-cols-8 gap-8 space-y-6">
           <div className="space-y-4  col-span-2 items-end flex">
             <p className="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -140,7 +140,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="space-y-2 col-span-2">
+          <div className="space-y-2 col-span-3 lg:max-w-[300px]">
             <div>
               <h3 className="font-semibold text-lg">News & Film Update</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -149,7 +149,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="flex gap-2 items-center border border-gray-300 rounded-md px-2 py-1 bg-white dark:bg-gray-800">
+            <div className="flex gap-2 items-center border border-gray-300 rounded-md px-2 py-1 bg-white dark:bg-gray-800 ">
               <Input
                 type="email"
                 placeholder="Your Email"
@@ -190,14 +190,14 @@ const Footer = () => {
               href="#"
               className="text-gray-400 hover:text-gray-700 dark:hover:text-white"
             >
-              <FaFacebookSquare className="h-6 w-6" />
+              <FaFacebookSquare className="h-6 w-6 text-blue-500" />
               <span className="sr-only">Facebook</span>
             </a>
             <a
               href="#"
               className="text-gray-400 hover:text-gray-700 dark:hover:text-white"
             >
-              <FaLinkedin className="h-6 w-6" />
+              <FaLinkedin className="h-6 w-6 text-cyan-500" />
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
@@ -207,6 +207,7 @@ const Footer = () => {
               <FaXTwitter className="h-6 w-6" />
               <span className="sr-only">X (Twitter)</span>
             </a>
+
             <a
               href="#"
               className="text-gray-400 hover:text-gray-700 dark:hover:text-white"
@@ -218,7 +219,7 @@ const Footer = () => {
               href="#"
               className="text-gray-400 hover:text-gray-700 dark:hover:text-white"
             >
-              <FaYoutube className="h-6 w-6" />
+              <FaYoutube className="h-6 w-6 text-red-500" />
               <span className="sr-only">YouTube</span>
             </a>
           </div>
