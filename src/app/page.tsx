@@ -1,15 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {
-  Star,
-  PlayCircle,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Star, PlayCircle } from "lucide-react";
 
 export default function Component() {
   return (
@@ -213,13 +204,14 @@ export default function Component() {
       </section>
 
       {/* About WSL Movement Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
+      <section className="w-full py-12 md:py-16 bg-white dark:bg-gray-800">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             About WSL Movement
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center md:justify-end">
+
+          <div className="grid md:grid-cols-4 gap-12 items-center">
+            <div className="flex justify-center md:justify-end col-span-1">
               <Image
                 src="/placeholder.svg?height=250&width=250"
                 alt="WSL Movement Logo"
@@ -228,7 +220,10 @@ export default function Component() {
                 className="h-64 w-64 object-contain"
               />
             </div>
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-6 text-center md:text-left col-span-3">
+              <h3 className="text-2xl font-bold">
+                "When Sadness Lingers" is more than a film—it’s a movement.
+              </h3>
               <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 italic">
                 &quot;The WSL Movement is a Filipino advocacy group dedicated to
                 breaking the silence around mental health through the powerful
@@ -238,6 +233,7 @@ export default function Component() {
                 for individuals and families facing mental health
                 challenges.&quot;
               </p>
+
               <h3 className="text-2xl font-bold">Join Us</h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Whether you&apos;re a survivor, supporter, or advocate, you
@@ -249,136 +245,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="w-full py-12 md:py-16 bg-black text-white">
-        <div className="container px-4 md:px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
-          <div className="space-y-4 md:col-span-2">
-            <p className="text-sm text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p className="text-sm text-gray-400">
-              &copy; 2023 All rights reserved.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-8 md:col-span-3">
-            <div className="space-y-2">
-              <h3 className="font-semibold text-lg">Navigation</h3>
-              <ul className="space-y-1 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Shop
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold text-lg">Our Studio</h3>
-              <ul className="space-y-1 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Our Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Our Team
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Our History
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold text-lg">Information</h3>
-              <ul className="space-y-1 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Disclaimer
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Press
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Vision
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold text-lg">News & Film Update</h3>
-              <p className="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  className="flex-1 bg-gray-800 border-gray-700 text-white placeholder-gray-500"
-                />
-                <Button
-                  type="submit"
-                  className="bg-red-600 hover:bg-red-700 text-white"
-                >
-                  Submit
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container px-4 md:px-6 flex justify-end mt-8">
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Facebook className="h-6 w-6" />
-              <span className="sr-only">Facebook</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Twitter className="h-6 w-6" />
-              <span className="sr-only">Twitter</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Instagram className="h-6 w-6" />
-              <span className="sr-only">Instagram</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Linkedin className="h-6 w-6" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Youtube className="h-6 w-6" />
-              <span className="sr-only">YouTube</span>
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
