@@ -123,7 +123,7 @@ export default function Component() {
         </h2>
 
         <div className="px-4 md:px-6 lg:px-16 space-y-6 ">
-          <div className="grid grid-cols-2 md:grid-cols-4 h-40  gap-8 items-center justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-4  gap-8 items-center justify-center">
             {[...Array(4)].map((_, i) => (
               <Image
                 key={i}
@@ -133,7 +133,7 @@ export default function Component() {
                 alt={`Sponsor Logo ${i + 1}`}
                 width={100}
                 height={100}
-                className="mx-auto opacity-80 hover:opacity-100 transition-opacity"
+                className=" h-40  mx-auto opacity-80 hover:opacity-100 transition-opacity"
               />
             ))}
           </div>
