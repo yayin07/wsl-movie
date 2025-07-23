@@ -181,7 +181,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="container px-4 md:px-6 flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 ">
+        <div className="container px-4 md:px-6 flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 ">
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 sm:mb-0">
             @EpicLens 2025. All rights reserved
           </p>

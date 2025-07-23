@@ -229,7 +229,7 @@ export default function Component() {
           <div className="flex justify-center mt-12">
             <Button
               size="lg"
-              className="bg-red-600 hover:bg-red-700 underline text-white cursor-pointer font-bold py-8 px-8 rounded-full text-lg uppercase"
+              className="bg-red-600 hover:bg-red-700 underline text-white cursor-pointer font-bold py-7 px-8 rounded-full text-lg uppercase"
             >
               Buy Tickets
             </Button>
@@ -238,7 +238,7 @@ export default function Component() {
       </section>
 
       {/* About WSL Movement Section */}
-      <section className="w-full py-12 md:py-16 bg-white dark:bg-gray-800">
+      <section className="w-full py-12 md:py-20 bg-white dark:bg-gray-800">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             About WSL Movement
